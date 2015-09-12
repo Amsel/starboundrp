@@ -9,13 +9,16 @@ from dateutil.relativedelta import relativedelta
 class Species(models.Model):
     name = models.CharField(max_length=127)
 
+    def __str__(self):
+        return self.name
+
 
 class Character(models.Model):
     first_name = models.CharField(max_length=127)
     # can be blank to support short names
     last_name = models.CharField(max_length=127, blank=True)
     birth_date = models.DateField()
-    owner = models.OneToOneField(User, blank=True, null=True)
+    owner = models.ForeignKey(User, blank=True, null=True)
 
     species = models.ForeignKey(Species)
     # To embrace all kinds of special community members,
@@ -25,7 +28,7 @@ class Character(models.Model):
     description = models.TextField(blank=True)
     biography = models.TextField(blank=True)
     picture_url = models.URLField(blank=True)
-    color_code = models.CharField(max_length=127)
+    color_code = models.CharField(max_length=127, blank=True)
 
     def __str__(self):
         return '{} {}'.format(self.first_name, self.last_name)
