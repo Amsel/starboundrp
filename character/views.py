@@ -1,4 +1,5 @@
-from django.views.generic import ListView
+from django.shortcuts import get_object_or_404
+from django.views.generic import ListView, DetailView
 
 from character.models import Character
 
@@ -6,3 +7,6 @@ from character.models import Character
 class CharacterList(ListView):
     model = Character
 
+
+class CharacterDetail(DetailView):
+    model = Character

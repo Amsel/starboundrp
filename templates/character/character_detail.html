@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile - {{ character }}</title>
+</head>
+<body>
+    {% block content %}
+        <h2>{{ character }}</h2>
+        <p>first name: {{ character.first_name }}</p>
+        <p>last name: {{ character.last_name }}</p>
+        <p>player: {{ character.owner.username }}</p>
+        <p>age: {{ character.age}}</p>
+        <p>color code: {{ character.color_code}}</p>
+        <p>species: {{ character.species}}</p>
+        <p>gender: {{ character.gender}}</p>
+        <h3>Description</h3>
+        <p>{{ character.description}}</p>
+        <h3>History</h3>
+        {{ character.biography }}
+    {% endblock %}
+</body>
+</html>
