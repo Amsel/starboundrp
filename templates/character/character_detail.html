@@ -7,17 +7,17 @@
 <body>
     {% block content %}
         <h2>{{ character }}</h2>
-        <p>first name: {{ character.first_name }}</p>
+        <p>first name: {{ character.first_name|ljust:"30" }}</p>
         <p>last name: {{ character.last_name }}</p>
         <p>player: {{ character.owner.username }}</p>
         <p>age: {{ character.age}}</p>
-        <p>color code: {{ character.color_code}}</p>
+        <p>color code: <span style="color:#{{ character.color_code }}">^#{{ character.color_code }}</span></p>
         <p>species: {{ character.species}}</p>
         <p>gender: {{ character.gender}}</p>
         <h3>Description</h3>
-        <p>{{ character.description}}</p>
+        <p>{{ character.description|wordwrap:72|escape|linebreaks }}</p>
         <h3>History</h3>
-        {{ character.biography }}
+        <p>{{ character.biography|wordwrap:72|escape|linebreaks }}</p>
     {% endblock %}
 </body>
 </html>
