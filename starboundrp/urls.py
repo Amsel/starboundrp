@@ -20,6 +20,6 @@ from character.views import CharacterList, CharacterDetail
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^characters/$', CharacterList.as_view(), name='characters'),
+    url(r'^character/$', CharacterList.as_view(), name='characters'),
     url(r'^character/(?P<pk>[0-9]+)/$', CharacterDetail.as_view(), name='character'),
 ]
