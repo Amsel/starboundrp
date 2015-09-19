@@ -9,6 +9,7 @@
         <h2>{{ character }}</h2>
         <p>first name: {{ character.first_name|ljust:"30" }}</p>
         <p>last name: {{ character.last_name }}</p>
+        <img src="{{ character.picture_url }}" style="width:128px;height:128px;"/>
         <p>player: {{ character.owner.username }}</p>
         <p>age: {{ character.age}}</p>
         <p>color code: <span style="color:#{{ character.color_code }}">^#{{ character.color_code }}</span></p>
