@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Starbound RP{% endblock %}</title>
+</head>
+<body>
+    <div id="navigation">
+        {% block navigation %}
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/characters">Characters</a></li>
+            </ul>
+        {% endblock %}
+    </div>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</body>
+</html>
