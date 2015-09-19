@@ -5,7 +5,7 @@
 {% block content %}
     <ul>
     {% for character in object_list %}
-        <li>{{ character }}</li>
+        <li><a href="{% url 'character_detail' character.pk %}">{{ character }}</a></li>
     {% endfor %}
     </ul>
 {% endblock %}
