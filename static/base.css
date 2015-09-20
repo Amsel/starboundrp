@@ -1,0 +1,14 @@
+/* very simple css*/
+body {
+    font-family: "sans-serif";
+    text-decoration: none;
+    color: #1e519c;
+}
+
+a {
+    text-decoration: none;
+    color: #6ca3ff;
+}
+.header-navigation-link {
+    border: dotted;
+}

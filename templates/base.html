@@ -2,21 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static  "base.css" %}"></link>
+
     <title>{% block title %} Starbound RP{% endblock %}</title>
 </head>
 <body>
-    <div id="navigation">
-        {% block navigation %}
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="{% url 'character_list' %}">Characters</a></li>
-            </ul>
-        {% endblock %}
+<header class="base-header">
+    <div class="header-row">
+        <!-- Title -->
+        <span class="header-title">Starbound RP</span>
+        <!-- Navigation. We hide it in small screens. -->
+        <nav class="header-navigation">
+            <a class="header-navigation-link" href="/">Home</a>
+            <a class="header-navigation-link" href="{% url 'character_list' %}">Characters</a>
+        </nav>
     </div>
-    <div id="content">
-        {% block content %}
-        {% endblock %}
-    </div>
-
+</header>
+<main class="content">
+    {% block content %}
+    {% endblock %}
+</main>
 </body>
 </html>
