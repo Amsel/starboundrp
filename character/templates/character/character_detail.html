@@ -10,8 +10,8 @@
     <p>player: {{ character.owner.username }}</p>
     <p>age: {{ character.age}}</p>
     <p>color code: <span style="color:#{{ character.color_code }}">^#{{ character.color_code }}</span></p>
-    <p>species: {{ character.species}}</p>
-    <p>gender: {{ character.gender}}</p>
+    <p>species: {{ character.species }}</p>
+    <p>gender: {{ character.gender }}</p>
     <h3>Description</h3>
     <p>{{ character.description|wordwrap:72|escape|linebreaks }}</p>
     <h3>History</h3>
