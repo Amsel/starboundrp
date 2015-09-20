@@ -1,8 +1,11 @@
 /* very simple css*/
+
 body {
     font-family: "sans-serif";
     text-decoration: none;
     color: #1e519c;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -10,5 +13,24 @@ a {
     color: #6ca3ff;
 }
 .header-navigation-link {
-    border: dotted;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.base-header {
+    background-color: #0f1d39;
+    border-bottom-width: 5px;
+    border-bottom-color: #1e519c;
+    border-bottom-style: solid;
+
+    padding: 15px;
+}
+
+.header-title {
+    color: aliceblue;
+}
+
+.content {
+    width: 93%;
+    margin-left: auto;
+    margin-right: auto;
 }

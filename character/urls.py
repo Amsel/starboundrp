@@ -2,7 +2,7 @@ from django.conf.urls import url
 
 from .views import CharacterDetail, CharacterList
 
-urlpatterns= [
+urlpatterns = [
     url(r'^$', CharacterList.as_view(), name='character_list'),
     url(r'^(?P<pk>[0-9]+)/$', CharacterDetail.as_view(), name='character_detail'),
 ]
