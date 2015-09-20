@@ -34,3 +34,7 @@ a {
     margin-left: auto;
     margin-right: auto;
 }
+
+#account-status {
+    text-align: right;
+}
