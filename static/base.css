@@ -3,38 +3,37 @@
 body {
     font-family: "sans-serif";
     text-decoration: none;
-    color: #1e519c;
     margin: 0;
     padding: 0;
 }
 
 a {
     text-decoration: none;
-    color: #6ca3ff;
-}
-.header-navigation-link {
-    padding-left: 10px;
-    padding-right: 10px;
-}
-.base-header {
-    background-color: #0f1d39;
-    border-bottom-width: 5px;
-    border-bottom-color: #1e519c;
-    border-bottom-style: solid;
-
-    padding: 15px;
 }
 
-.header-title {
-    color: aliceblue;
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
 }
 
 .content {
     width: 93%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
 }
 
-#account-status {
-    text-align: right;
+header {
+    background-color: gray;
+    padding: 0.7ex;
+}
+
+nav {
+    background-color: darkgrey;
+    padding: 0.7ex;
+     /* probably because of pure CSS madness, this is required so the
+      * floating children will resize the parent...
+      */
+    overflow: hidden;
 }

@@ -4,27 +4,15 @@
     <meta charset="UTF-8">
     {% load staticfiles %}
     <link rel="stylesheet" href="{% static  "base.css" %}"/>
-
-    <title>{% block title %} Starbound RP{% endblock %}</title>
+    <title>Starbound RP</title>
 </head>
 <body>
-<header class="base-header">
-    <div class="header-row">
-        <span class="header-title">Starbound RP</span>
-        <nav class="header-navigation">
-            <a class="header-navigation-link" href="/">Home</a>
-            <a class="header-navigation-link" href="{% url 'character_list' %}">Characters</a>
-        </nav>
-        <div id="account-status">
-            {% if user.is_authenticated %}
-                <a href="{% url 'logout' %}">Logout {{ user.username }}</a>
-            {% else %}
-                <a href="{% url 'login' %}">Login</a>
-
-            {% endif %}
-        </div>
-    </div>
+<header>
+    <span>Starbound RP</span>
 </header>
+
+{% include 'main_navigation.html' %}
+
 <main class="content">
     {% block content %}
     {% endblock %}
