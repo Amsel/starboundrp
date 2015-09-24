@@ -12,6 +12,9 @@ class Species(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name_plural = 'Species'
+
 
 class Character(models.Model):
     first_name = models.CharField(max_length=127)

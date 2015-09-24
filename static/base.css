@@ -11,6 +11,11 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style: none;
+    padding: 0;
+}
+
 .left {
     float: left;
 }
@@ -26,14 +31,28 @@ a {
 
 header {
     background-color: gray;
-    padding: 0.7ex;
+    padding: 0.7em;
 }
 
 nav {
     background-color: darkgrey;
-    padding: 0.7ex;
+    padding: 0.7em;
      /* probably because of pure CSS madness, this is required so the
       * floating children will resize the parent...
       */
     overflow: hidden;
+}
+
+nav a {
+    padding: 0 0.7em 0 0;
+}
+
+.page-title {
+    font-size: 3ex;
+}
+
+.page-subtitle {
+    font-size: 2ex;
+    font-style: italic;
+    margin-left: 1em;
 }
