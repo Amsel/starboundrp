@@ -37,4 +37,4 @@ class Character(models.Model):
         return '{} {}'.format(self.first_name, self.last_name)
 
     def age(self):
-        return relativedelta(date.today(), self.birth_date)
+        return relativedelta(date.today(), self.birth_date).years
