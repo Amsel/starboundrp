@@ -16,8 +16,10 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from .views import StartPage
+
 urlpatterns = [
-    url(r'^', include('character.urls')),
+    url(r'^$', StartPage.as_view(), name='home'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^character/', include('character.urls')),
     url('^', include('django.contrib.auth.urls'))
