@@ -25,7 +25,6 @@ ul {
 }
 
 .content {
-    width: 93%;
     margin: auto;
 }
 
@@ -55,4 +54,8 @@ nav a {
     font-size: 2ex;
     font-style: italic;
     margin-left: 1em;
+}
+
+.character-card {
+    padding: 2ex;
 }

@@ -3,17 +3,21 @@
 {% block title %} Profile - {{ character }} {% endblock %}
 
 {% block content %}
-    <h2>{{ character }}</h2>
-    <p>first name: {{ character.first_name|ljust:"30" }}</p>
-    <p>last name: {{ character.last_name }}</p>
-    <img src="{{ character.picture_url }}" style="width:128px;height:128px;"/>
-    <p>player: {{ character.owner.username }}</p>
-    <p>age: {{ character.age}}</p>
-    <p>color code: <span style="color:#{{ character.color_code }}">^#{{ character.color_code }}</span></p>
-    <p>species: {{ character.species }}</p>
-    <p>gender: {{ character.gender }}</p>
+    <section class="left character-card">
+        <img src="{{ character.picture_url }}" style="width:256px; min-height: 256px"/>
+        <h2>{{ character }}</h2>
+        <p>Age: {{ character.age}}</p>
+        <p>Species: {{ character.species }}</p>
+        <p>Gender: {{ character.gender }}</p>
+    </section>
+    <section class="left character-card">
+    <p>First Name: {{ character.first_name|ljust:"30" }}</p>
+    <p>Last Name: {{ character.last_name }}</p>
+    <p>Player: {{ character.owner.username }}</p>
+    <p>Color Code: <span style="color:#{{ character.color_code }}">^#{{ character.color_code }}</span></p>
     <h3>Description</h3>
-    <p>{{ character.description|wordwrap:72|escape|linebreaks }}</p>
+    <p>{{ character.description|wordwrap:82|escape|linebreaks }}</p>
     <h3>History</h3>
-    <p>{{ character.biography|wordwrap:72|escape|linebreaks }}</p>
+    <p>{{ character.biography|wordwrap:82|escape|linebreaks }}</p>
+    </section>
 {% endblock %}
