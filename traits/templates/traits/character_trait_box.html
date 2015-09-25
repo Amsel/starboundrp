@@ -1,0 +1,5 @@
+<div>
+    {% for trait in trait_list %}
+        {% include 'traits/trait_badge.html' with trait_name=trait.name %}
+    {% endfor %}
+</div>
