@@ -12,12 +12,14 @@
         <p>Player: {{ character.owner.username }}</p>
     </section>
     <section class="left character-card">
-    <p>First Name: {{ character.first_name|ljust:"30" }}</p>
-    <p>Last Name: {{ character.last_name }}</p>
-    <p>Color Code: <span style="color:#{{ character.color_code }}">^#{{ character.color_code }}</span></p>
-    <h3>Description</h3>
-    <p>{{ character.description|wordwrap:82|escape|linebreaks }}</p>
-    <h3>History</h3>
-    <p>{{ character.biography|wordwrap:82|escape|linebreaks }}</p>
+        <p>First Name: {{ character.first_name|ljust:"30" }}</p>
+        <p>Last Name: {{ character.last_name }}</p>
+        <p>Color Code: <span style="color:#{{ character.color_code }}">^#{{ character.color_code }}</span></p>
+        <h3>Description</h3>
+        <p>{{ character.description|wordwrap:82|escape|linebreaks }}</p>
+        <h3>History</h3>
+        <p>{{ character.biography|wordwrap:82|escape|linebreaks }}</p>
+        <h3>Traits</h3>
+        {% include 'traits/character_trait_box.html' %}
     </section>
 {% endblock %}
