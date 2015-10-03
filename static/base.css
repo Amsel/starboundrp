@@ -46,6 +46,10 @@ nav a {
     padding: 0 0.7em 0 0;
 }
 
+section {
+    padding: 2ex;
+}
+
 .page-title {
     font-size: 3ex;
 }
@@ -56,13 +60,9 @@ nav a {
     margin-left: 1em;
 }
 
-.character-card {
-    padding: 2ex;
-}
-
 .trait-badge {
     padding: 0.7em;
-    border-radius: 1px;
+    border-width: 2px;
     border-color: black;
     border-style: solid;
 }

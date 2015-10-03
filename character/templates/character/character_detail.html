@@ -4,7 +4,7 @@
 {% block title %} Profile - {{ character }} {% endblock %}
 
 {% block content %}
-    <section class="left character-card">
+    <section class="left">
         <img src="{{ character.picture_url }}" style="width:256px; min-height: 256px"/>
         <h2>{{ character }}</h2>
         <p>Age: {{ character.age}}</p>
@@ -12,7 +12,7 @@
         <p>Gender: {{ character.gender }}</p>
         <p>Player: {{ character.owner.username }}</p>
     </section>
-    <section class="left character-card">
+    <section class="left">
         <p>First Name: {{ character.first_name|ljust:"30" }}</p>
         <p>Last Name: {{ character.last_name }}</p>
         <p>Color Code: <span style="color:#{{ character.color_code }}">^#{{ character.color_code }}</span></p>

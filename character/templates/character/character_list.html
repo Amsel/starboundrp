@@ -3,9 +3,11 @@
 {% block title %}Character List{% endblock %}
 
 {% block content %}
-    <ul>
-    {% for character in object_list %}
-        <li><a href="{% url 'character_detail' character.pk %}">{{ character }}</a></li>
-    {% endfor %}
-    </ul>
+    <section class="left">
+        <ul>
+        {% for character in object_list %}
+            <li><a href="{% url 'character_detail' character.pk %}">{{ character }}</a></li>
+        {% endfor %}
+        </ul>
+    </section>
 {% endblock %}
