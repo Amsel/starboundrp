@@ -13,11 +13,3 @@ class CharacterList(ListView):
 
 class CharacterDetail(DetailView):
     model = Character
-
-    def get_context_data(self, **kwargs):
-        # call base implementation
-        context = super(CharacterDetail, self).get_context_data(**kwargs)
-
-        context['trait_list'] = get_list_or_404(Trait)
-
-        return context

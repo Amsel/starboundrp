@@ -59,3 +59,10 @@ nav a {
 .character-card {
     padding: 2ex;
 }
+
+.trait-badge {
+    padding: 0.7em;
+    border-radius: 1px;
+    border-color: black;
+    border-style: solid;
+}
