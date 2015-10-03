@@ -1,7 +1,16 @@
 from django.contrib import admin
 
-from .models import *
+from .models import Trait
 
 # Register your models here.
 
-admin.site.register(Trait)
+
+@admin.register(Trait)
+class TraitAdmin(admin.ModelAdmin):
+    exclude = ('characters',)
+
+
+class TraitInline(admin.StackedInline):
+    model = Trait.characters.through
+    extra = 1
+
