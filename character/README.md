@@ -1,5 +1,4 @@
 character
 =========
 
-This app provides basic functionality to display and edit character
-sheets.
+This app provides basic functionality to display character sheets.
