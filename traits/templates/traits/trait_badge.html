@@ -1,3 +1,4 @@
-<div class="left trait-badge {% if trait.is_bonus %}trait-badge-bonus{% else %}trait-badge-malus{% endif %}">
+<div class="left trait-badge {% if trait.is_bonus %}trait-badge-bonus{% else %}trait-badge-malus{% endif %}"
+     title="{{ trait.description }}" >
     {{ trait.name }}
 </div>
