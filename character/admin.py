@@ -7,7 +7,10 @@ from .models import *
 
 @admin.register(Character)
 class CharacterAdmin(admin.ModelAdmin):
-    pass
+    # this needs to be reset, since for some reason the traits inline gets also
+    # applied to other admin sites
+    # TODO research this! maybe some python magic
+    inlines = []
 
 
 admin.site.register(Species)
